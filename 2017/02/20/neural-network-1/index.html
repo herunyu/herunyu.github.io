@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="neural network, deep learning," />
 
 
 
@@ -87,13 +87,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://herunyu.github.io/about/index.html">
+<meta name="description" content="最近在Udacity上面报了Deep Learning的课程来深入学习，科大的课还是偏基础了一些。第一门课就是讲神经网络，每次看完就忘，这次下定决定写下来当复习了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神经网络(Neural Network)学习笔记">
+<meta property="og:url" content="http://herunyu.github.io/2017/02/20/neural-network-1/index.html">
 <meta property="og:site_name" content="ytry">
-<meta property="og:updated_time" content="2017-02-19T13:51:14.240Z">
+<meta property="og:description" content="最近在Udacity上面报了Deep Learning的课程来深入学习，科大的课还是偏基础了一些。第一门课就是讲神经网络，每次看完就忘，这次下定决定写下来当复习了。">
+<meta property="og:image" content="https://snag.gy/iV8ebO.jpg">
+<meta property="og:image" content="https://snag.gy/kcjTEA.jpg">
+<meta property="og:image" content="https://snag.gy/nF10GR.jpg">
+<meta property="og:image" content="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a49d8a_hq-perceptron/hq-perceptron.png">
+<meta property="og:image" content="https://snag.gy/ZE3t5R.jpg">
+<meta property="og:updated_time" content="2017-02-20T09:55:22.663Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="神经网络(Neural Network)学习笔记">
+<meta name="twitter:description" content="最近在Udacity上面报了Deep Learning的课程来深入学习，科大的课还是偏基础了一些。第一门课就是讲神经网络，每次看完就忘，这次下定决定写下来当复习了。">
+<meta name="twitter:image" content="https://snag.gy/iV8ebO.jpg">
 
 
 
@@ -121,19 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://herunyu.github.io/about/"/>
+  <link rel="canonical" href="http://herunyu.github.io/2017/02/20/neural-network-1/"/>
 
 
 
 
 
-  <title>
-  
-
-  
-    about | ytry
-  
-</title>
+  <title> 神经网络(Neural Network)学习笔记 | ytry </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -158,7 +161,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,18 +303,203 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h2 class="post-title" itemprop="name headline">about</h2>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://herunyu.github.io/2017/02/20/neural-network-1/">
 
-</header>
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ytry">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="ytry">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="ytry" src="">
+    </span>
+  </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                神经网络(Neural Network)学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-20T17:52:10+08:00">
+                2017-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Machine Learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/20/neural-network-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/neural-network-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-    
+      
+
+      
+        <p>最近在Udacity上面报了Deep Learning的课程来深入学习，科大的课还是偏基础了一些。第一门课就是讲神经网络，每次看完就忘，这次下定决定写下来当复习了。</p>
+<a id="more"></a>
+<h1 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h1><p>首先我们来看一个例子。</p>
+<p>假设你是一所大学招生办的，掌握着学生是否录取的生死大权。<br><img src="https://snag.gy/iV8ebO.jpg" alt="image1"><br>如上图， 学生1测试成绩9分，等级8分，那么他被录取了。学生2测试成绩3分，等级4分，没有被录取。当学生3测试成绩为7分，等级为6分，我们是否录取他？</p>
+<p>由于现在我们只知道两个学生的录取情况，我们的样本集太小了，所以我们来看看总的录取情况。从下图我们可以看到绿色代表被录取的同学，红色则为被拒的。这时候，我们可以从已有的数据里面画一条大致可以区分开被录取与未录取的直线。那么这时候，判断学生3是否被录取就只需要看他在这条线的左边还是右边。 </p>
+<p><img src="https://snag.gy/kcjTEA.jpg" alt="image2"><br>显而易见，根据上图我们是会录取学生3的。</p>
+<p>但是这个录取的情况显然不符合实际情况，因为从上图我们看到尽管测试成绩很高但等级很低的同学被录取了，还有等级很高，但测试成绩较差的也被录取了。实际情况是我们需要两方面都相对好的同学进入我们学校（学校需要德智体美都棒的人，你懂的）。</p>
+<p>所以实际情况我们需要两条线来找寻符合我们要求的学生（如下图）。那么这两条线怎么找呢？找寻这两条线的方法就是通过梯度下降法来确定误差最小的两条线。所谓误差最小就是我们找的两条线所区分的是否被录取的同学的准确度最高。这样一来，每当有新同学报上两个成绩之后，机器就可以迅速根据我们建的模型来判断是否录取该同学，这就是神经网络。</p>
+<p>判断一个学生（测试成绩1，等级8）是否被录取可以视为一个两重步骤（我们这里有两条线）的验证过程，如下图：<br><img src="https://snag.gy/nF10GR.jpg" alt="image3"></p>
+<p>从左上角可以看出对于第一条线，这位同学是可以通过的，但是对于第二条线来说，就被判断成不通过。那么综合两条线的判断，我们不录取该学生。</p>
+<p>综上所述，我们可以得出下面这个图形来判断是否录取某位学生。下图里面引用我们刚才那个学生的成绩来做例子<br><img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a49d8a_hq-perceptron/hq-perceptron.png" alt="image4"></p>
+<p>为什么叫神经网络呢，这是因为他的原理跟我们人体大脑神经网络的处理方式是类似的机制。通过不同的神经元对相同物体的判断最后得出一个总的结果来告诉我们是与非。</p>
+<p><img src="https://snag.gy/ZE3t5R.jpg" alt="image"></p>
+<h1 id="感知器"><a href="#感知器" class="headerlink" title="感知器"></a>感知器</h1><blockquote>
+<p>上完课回来继续…..</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/neural-network-deep-learning/" rel="tag"># neural network, deep learning</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/19/first-post/" rel="next" title="First Post">
+                <i class="fa fa-chevron-left"></i> First Post
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
           
@@ -322,8 +510,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="about/index.html"
-           data-title="about" data-url="http://herunyu.github.io/about/index.html">
+      <div class="ds-thread" data-thread-key="2017/02/20/neural-network-1/"
+           data-title="神经网络(Neural Network)学习笔记" data-url="http://herunyu.github.io/2017/02/20/neural-network-1/">
       </div>
     
   </div>
@@ -347,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -417,6 +614,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#神经网络"><span class="nav-number">1.</span> <span class="nav-text">神经网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感知器"><span class="nav-number">2.</span> <span class="nav-text">感知器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -532,6 +745,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

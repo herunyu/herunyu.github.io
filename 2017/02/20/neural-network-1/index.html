@@ -89,7 +89,7 @@
 
 <meta name="description" content="最近在Udacity上面报了Deep Learning的课程来深入学习，科大的课还是偏基础了一些。第一门课就是讲神经网络，每次看完就忘，这次下定决定写下来当复习了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="神经网络(Neural Network)学习笔记">
+<meta property="og:title" content="神经网络(Neural Network)学习笔记（1）">
 <meta property="og:url" content="http://herunyu.github.io/2017/02/20/neural-network-1/index.html">
 <meta property="og:site_name" content="ytry">
 <meta property="og:description" content="最近在Udacity上面报了Deep Learning的课程来深入学习，科大的课还是偏基础了一些。第一门课就是讲神经网络，每次看完就忘，这次下定决定写下来当复习了。">
@@ -98,9 +98,14 @@
 <meta property="og:image" content="https://snag.gy/nF10GR.jpg">
 <meta property="og:image" content="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a49d8a_hq-perceptron/hq-perceptron.png">
 <meta property="og:image" content="https://snag.gy/ZE3t5R.jpg">
-<meta property="og:updated_time" content="2017-02-20T09:59:40.142Z">
+<meta property="og:image" content="https://snag.gy/0luGwd.jpg">
+<meta property="og:image" content="https://snag.gy/PegBRb.jpg">
+<meta property="og:image" content="https://snag.gy/5lrvZV.jpg">
+<meta property="og:image" content="https://snag.gy/WNFvYJ.jpg">
+<meta property="og:image" content="https://snag.gy/Xmzn05.jpg">
+<meta property="og:updated_time" content="2017-03-04T13:48:42.786Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="神经网络(Neural Network)学习笔记">
+<meta name="twitter:title" content="神经网络(Neural Network)学习笔记（1）">
 <meta name="twitter:description" content="最近在Udacity上面报了Deep Learning的课程来深入学习，科大的课还是偏基础了一些。第一门课就是讲神经网络，每次看完就忘，这次下定决定写下来当复习了。">
 <meta name="twitter:image" content="https://snag.gy/iV8ebO.jpg">
 
@@ -136,7 +141,7 @@
 
 
 
-  <title> 神经网络(Neural Network)学习笔记 | ytry </title>
+  <title> 神经网络(Neural Network)学习笔记（1） | ytry </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -336,7 +341,7 @@
             
             
               
-                神经网络(Neural Network)学习笔记
+                神经网络(Neural Network)学习笔记（1）
               
             
           </h1>
@@ -437,9 +442,25 @@
 <p>综上所述，我们可以得出下面这个图形来判断是否录取某位学生。下图里面引用我们刚才那个学生的成绩来做例子<br><img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a49d8a_hq-perceptron/hq-perceptron.png" alt="image4"></p>
 <p>为什么叫神经网络呢，这是因为他的原理跟我们人体大脑神经网络的处理方式是类似的机制。通过不同的神经元对相同物体的判断最后得出一个总的结果来告诉我们是与非。</p>
 <p><img src="https://snag.gy/ZE3t5R.jpg" alt="image"></p>
-<h1 id="感知器"><a href="#感知器" class="headerlink" title="感知器"></a>感知器</h1><blockquote>
-<p>上完课回来继续…..</p>
-</blockquote>
+<h1 id="感知器"><a href="#感知器" class="headerlink" title="感知器"></a>感知器</h1><p>那么什么是感知器呢？下图就是我们例子里面的一个感知器。通过我们输入的值，感知器会告诉我们它判断出来的结果是什么。在例子里面，感知器会告诉我们该学生是否会被录取。</p>
+<p><img src="https://snag.gy/0luGwd.jpg" alt="image6"></p>
+<p>那么这个感知器怎么会知道对于录取一个学生，是考试成绩重要还是等级比较重要呢？其实对于一个神经网络来说，一开始它是什么都不知道的，我们需要用已有的数据来训练它，它会自我学习并做出判断。这里我们说的自我学习其实是神经网络里面对于每一个参数都会有一个权重(weight)。在上面的例子里，参数就是test和grade。</p>
+<p>对于权重，其实很好理解。神经网络会通过大量的数据来判断哪一个参数更重要，而重要与否就是这个权重的大小。</p>
+<p><code>$w_1\cdot x_1 + w_2 \cdot x_2 $</code></p>
+<p><code>$w_1$</code> 和 <code>$ w_2 $</code> 就是对应的权重。</p>
+<p>这个是对于只有两个参数输入的情况下。通常来说我们会用如下式子表示：</p>
+<p><code>$ \sum{w_i x_i} $</code></p>
+<p>那么上面就是我们作为感知器输入的值，这个值要经过一个激活函数(activation function)来输出的结果。如果是上述例子的话即判断是否录取该学生。从字面上来理解的话，这个函数就是类似一个神经元，这些输入值激活了这个神经元，神经元经过一系列不知道怎么搞的就给出了一个指令。对于机器来说，我们给他一个函数(function)，这个函数可以是任意函数，但是当然你要取个合乎逻辑的函数而不是乱来= =</p>
+<p>为了让输入值更具有逻辑性，引入了一个偏见值(bias)，也不知道中文是不是这样翻译。</p>
+<p>那么我们的函数就变成了<br><img src="https://snag.gy/PegBRb.jpg" alt="image7"></p>
+<p>这个函数只会返回0或者1因为我们只需要知道“对”还是“不对”。</p>
+<p>以下是和门和或门的感知器，这个大家看一下都懂了吧。<br><img src="https://snag.gy/5lrvZV.jpg" alt="image8"></p>
+<p>但是如果是异或门的话，一个感知器就没办法了。</p>
+<p><img src="https://snag.gy/WNFvYJ.jpg" alt="image9"></p>
+<p>就得用更复杂的，这里A是NOT, B是AND, C是OR，这样就组成了一个异或门的神经网络</p>
+<p><img src="https://snag.gy/Xmzn05.jpg" alt="image10"></p>
+<p>以上就是基本的知识点。</p>
+<p>下次讲讲多层和Backpropagation.</p>
 
       
     </div>
@@ -513,7 +534,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/20/neural-network-1/"
-           data-title="神经网络(Neural Network)学习笔记" data-url="http://herunyu.github.io/2017/02/20/neural-network-1/">
+           data-title="神经网络(Neural Network)学习笔记（1）" data-url="http://herunyu.github.io/2017/02/20/neural-network-1/">
       </div>
     
   </div>
